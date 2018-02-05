@@ -1,5 +1,3 @@
-// Some data
-
 const inventors = [
   { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
   { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -24,3 +22,17 @@ const people = [
   'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh',
   'Biondo, Frank', 'Birrell, Augustine', 'Black Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'
 ];
+
+// Array.prototype.filter()
+// Filtering the list of inventors who were born in the 1500's
+const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
+console.table(fifteen)
+
+
+// Array.prototype.map()
+// Inventors' first and last names
+const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+console.table(fullNames);
+
+// Array.prototype.sort()
+// Inventors by year, oldest to youngest
