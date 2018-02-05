@@ -23,16 +23,21 @@ const people = [
   'Biondo, Frank', 'Birrell, Augustine', 'Black Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'
 ];
 
-// Array.prototype.filter()
+// -------------------------------------Array.prototype.filter()------------------------------------------------
 // Filtering the list of inventors who were born in the 1500's
 const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
 console.table(fifteen)
 
-
-// Array.prototype.map()
+// -------------------------------------Array.prototype.map()------------------------------------------------
 // Inventors' first and last names
 const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
 console.table(fullNames);
 
-// Array.prototype.sort()
+// -------------------------------------Array.prototype.sort()------------------------------------------------
 // Inventors by year, oldest to youngest
+
+const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+console.table(ordered);
+
+
+
